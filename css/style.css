@@ -1,3 +1,4 @@
+* {/* GLOBAL RESET */
 * {
   margin: 0;
   padding: 0;
@@ -19,30 +20,34 @@ body {
   line-height: 1.7;
 }
 
-/* HERO */
+/* ========================= */
+/* HERO SECTION */
+/* ========================= */
 #hero {
+   min-height: auto;
+  /* min-height: 100vh; full screen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(135deg, #020617, #1e3a8a 70%);
   color: white;
-  padding: 90px 20px;
+  padding: 30px 20px;
+  /* padding: 90px 20px; */
   text-align: center;
 }
 
 .hero-content {
   max-width: 900px;
   margin: auto;
-  padding: 40px 24px;
+  padding: 20px 24px;
+  /* padding: 40px 24px; restored vertical spacing */
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
-.logo {
-  width: 90px;
-  margin-bottom: 14px;
-}
-
-/* HERO LOGOS ROW */
+/* HERO LOGOS */
 .hero-logos {
   display: flex;
   justify-content: space-between;
@@ -54,23 +59,24 @@ body {
   width: 85px;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.4));
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
 }
 
-/* Optional: Slight size difference */
 .left-logo {
-  width: 80px;
+  width: 120px; /* adjusted for proper laptop display */
+  height: auto;
 }
 
 .right-logo {
   width: 90px;
 }
 
-/* Responsive: stack logos nicely on small screens */
+/* RESPONSIVE LOGOS */
 @media (max-width: 600px) {
   .hero-logos {
+    flex-direction: column; /* stack vertically */
+    gap: 12px;
     justify-content: center;
-    gap: 24px;
   }
 
   .hero-logos .logo {
@@ -78,7 +84,7 @@ body {
   }
 }
 
-
+/* HERO TEXT */
 #hero h1 {
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 8px;
@@ -109,7 +115,7 @@ body {
   opacity: 0.85;
 }
 
-/* BUTTON */
+/* HERO BUTTON */
 .btn {
   display: inline-block;
   margin-top: 26px;
@@ -131,7 +137,19 @@ body {
   filter: brightness(1.05);
 }
 
-/* SECTIONS */
+/* MOBILE BUTTON ADJUSTMENT */
+@media (max-width: 600px) {
+  .register-btn {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    margin: 20px auto;
+    padding: 14px 0;
+  }
+}
+
+/* ========================= */
+/* SECTIONS GENERAL */
 section {
   padding: 80px 20px;
   max-width: 1100px;
@@ -145,7 +163,7 @@ section h2 {
   font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
-/* ABOUT */
+/* ABOUT SECTION */
 #about p {
   max-width: 850px;
   margin: 10px auto;
@@ -153,7 +171,7 @@ section h2 {
   color: #334155;
 }
 
-/* WHO */
+/* WHO SHOULD ATTEND */
 .who-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -198,7 +216,7 @@ section h2 {
   margin-bottom: 8px;
 }
 
-/* SCHEDULE */
+/* EVENT SCHEDULE */
 #schedule {
   background: linear-gradient(180deg, #eef2ff, #ffffff);
   border-radius: 30px;
@@ -225,7 +243,7 @@ section h2 {
   color: #0f172a;
 }
 
-/* PROMO */
+/* PROMO / QR SECTION */
 #promo {
   text-align: center;
 }
@@ -258,6 +276,7 @@ section h2 {
   font-size: 0.9rem;
 }
 
+/* ========================= */
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .hero-content {
@@ -272,3 +291,11 @@ section h2 {
     color: #1e3a8a;
   }
 }
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 20px 12px;
+  }
+}
+
+
