@@ -5,26 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>National HR Meet 2026</title>
     <link rel="stylesheet" href="css/style.css" />
-    
   </head>
 
   <body>
     <!-- HEADER / HERO -->
     <header id="hero">
       <div class="hero-content">
-     
+
+        <!-- Logos -->
         <div class="hero-logos">
           <img
             src="assets/bharati_vidyapeeth_logo.png"
-            alt="University Logo."
-            class="logo left-log.o"
+            alt="University Logo"
+            class="logo left-logo"
             style="width: 200px; height: 200px"
           />
 
           <img
             src="assets/ymim-logo.png"
-            alt="Institute Logo."
-            class=" logo right-logo."
+            alt="Institute Logo"
+            class="logo right-logo"
           />
         </div>
 
@@ -44,7 +44,7 @@
         <a
           href="https://forms.gle/X97TaP93jaPBy5S48"
           target="_blank"
-          class="btn register-btn."
+          class="btn register-btn"
         >
           Register Now
         </a>
@@ -80,7 +80,7 @@
         <div class="who-card">MBA / BBA / BCA / MCA Students</div>
         <div class="who-card">Academicians & Researchers</div>
         <div class="who-card">
-          Open to all the Branch students for attending
+          Open to all Branch students
         </div>
       </div>
     </section>
@@ -93,14 +93,17 @@
           <h3>Industry Insights</h3>
           <p>Learn directly from senior HR leaders and practitioners.</p>
         </div>
+
         <div class="highlight-card">
           <h3>Future-Ready Skills</h3>
           <p>Understand AI, analytics, and next-gen HR strategies.</p>
         </div>
+
         <div class="highlight-card">
           <h3>Networking</h3>
           <p>Connect with professionals, peers, and recruiters.</p>
         </div>
+
         <div class="highlight-card">
           <h3>Valuable Certification</h3>
           <p>
@@ -112,7 +115,7 @@
       </div>
     </section>
 
-    <!-- TABLE PROGRAMME -->
+    <!-- EVENT SCHEDULE -->
     <section id="schedule">
       <h2>Event Schedule</h2>
 
@@ -147,20 +150,19 @@
       </div>
     </section>
 
-    <!-- PROMO / QR -->
+    <!-- PROMO -->
     <section id="promo">
       <h2>Register & Spread the Word</h2>
       <p>Scan the QR code or click the button to register.</p>
 
       <div class="promo-box">
-        <!-- <img src="../assets/HR Meet 3.0 Bannner.png" alt="Event Pamphlet" /> -->
-        <img src="/assets/Register.png" alt="Registration QR Code" />
+        <img src="assets/Register.png" alt="Registration QR Code" />
       </div>
 
       <a
         href="https://forms.gle/X97TaP93jaPBy5S48"
         target="_blank"
-        class="btn register-btn secondary."
+        class="btn register-btn"
       >
         Register via Google Form
       </a>
@@ -175,19 +177,17 @@
       <p>© 2026 National HR Meet. All Rights Reserved.</p>
     </footer>
 
-    <!-- Certificate Image Popup -->
+    <!-- Certificate Popup -->
     <div id="certificatePopup" class="popup-overlay">
       <div class="popup-content">
         <span class="close-btn" onclick="closePopup()">&times;</span>
 
-        <!-- Image -->
         <img
-          src="/assets/Register.png"
-          alt=" Event Certificate."
+          src="assets/Register.png"
+          alt="Event Certificate"
           class="popup-image"
         />
 
-        <!-- Text Below Image -->
         <div class="popup-text">
           <h2>🎓 Earn Your Certificate</h2>
           <p>
@@ -195,8 +195,14 @@
             Participation to strengthen your resume and showcase your
             professional growth.
           </p>
-          <a href="https://forms.gle/X97TaP93jaPBy5S48"
-          target="_blank" class="popup-btn">Register Now</a>
+
+          <a
+            href="https://forms.gle/X97TaP93jaPBy5S48"
+            target="_blank"
+            class="btn register-btn"
+          >
+            Register Now
+          </a>
         </div>
       </div>
     </div>
@@ -204,15 +210,17 @@
     <script>
       window.onload = function () {
         setTimeout(function () {
-          document.getElementById("certificatePopup").classList.add("active");
-        }, 2000); // shows after 2 seconds
+          document
+            .getElementById("certificatePopup")
+            .classList.add("active");
+        }, 2000);
       };
 
       function closePopup() {
-        document.getElementById("certificatePopup").classList.remove("active");
+        document
+          .getElementById("certificatePopup")
+          .classList.remove("active");
       }
     </script>
   </body>
 </html>
-
-
